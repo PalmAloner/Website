@@ -225,20 +225,11 @@ span{
 }
 
 @keyframes words{
-    0%, 20%{
-        content: "Web Developer";
+    0%, 50%{
+        content: "นักเรียนสายคอม";
     }
-    21%, 40%{
-        content: "Developer";
-    }
-    41%, 60%{
-        content: "Web Designer";
-    }
-    61%, 80%{
-        content: "Youtuber";
-    }
-    81%, 100%{
-        content: "Script Writer";
+    51%, 100%{
+        content: "นักเรียนที่กำลังฝึกเขียนโค้ด";
     }
 }
 
