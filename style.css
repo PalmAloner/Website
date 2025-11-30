@@ -49,7 +49,7 @@ header{
     transform: scale(1.1);
 }
 
-nav a{
+nav a {
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
@@ -59,38 +59,60 @@ nav a{
 }
 
 nav a:hover,
-nav a.active{
+nav a.active {
     color: #b74b4b;
     border-bottom: 3px solid #b74b4b;
 }
 
-@media(max-width:995px){
-    nav{
+/* Hamburger จะปรากฏเมื่อหน้าจอเล็ก */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Responsive สำหรับมือถือ */
+@media(max-width: 995px){
+    .hamburger {
+        display: flex; /* แสดง Hamburger */
+    }
+
+    nav {
         position: absolute;
-        display: none;
         top: 0;
         right: 0;
         width: 40%;
-        border-left: 3px solid #b74b4b;
-        border-bottom: 3px solid #b74b4b;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
+        height: 100vh; /* เต็มความสูงหน้าจอ */
+        display: none; /* ซ่อนตอนแรก */
+        flex-direction: column;
+        padding: 2rem 1rem;
         background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        border-left: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        z-index: 999;
     }
 
-    nav.active{
-        display: block;
+    nav.active {
+        display: flex; /* แสดงเมื่อกด Hamburger */
     }
 
-    nav a{
+    nav a {
         display: block;
         font-size: 2rem;
-        margin: 3rem 0;
+        margin: 2rem 0;
     }
 
     nav a:hover,
-    nav a.active{
+    nav a.active {
         padding: 1rem;
         border-radius: 0.5rem;
         border-bottom: 0.5rem solid #b74b4b;
@@ -100,6 +122,67 @@ nav a.active{
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
+}
+
+.education{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.education-img1{
+    border-radius: 50%;
+}
+
+.education-img2{
+    border-radius: 50%;
+}
+
+.education-img {
+    display: flex;
+    justify-content: center;
+    gap: 50rem; /* ระยะห่างระหว่างรูป */
+}
+
+.education-img img {
+    width: 30vh;
+    border-radius: 50%; /* ทำวงกลม */
+    cursor: pointer;
+    transition:  0.2s linear;
+}
+
+.education-img1 img{
+    position: relative;
+    bottom: 20px;
+    right: 230px;
+    width: 30vh;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #b74b4b;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.education-img2 img{
+    position: relative;
+    bottom: 20px;
+    left: 120px;
+    width: 30vh;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #b74b4b;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.education .education-content h1{
+    position: relative;
+    right: -88rem;
+    top: 20rem;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: -50rem;
 }
 
 .home{
@@ -259,3 +342,19 @@ span{
     }
 }
 
+@media (max-width: 995px) {
+    .education-img img {
+        width: 120px;
+        height: 120px;
+    }
+    .education-img {
+        gap: 10rem;
+    }
+    .education .education-content h3{
+        font-size: 2.5rem;
+    }
+
+    .education-content h1{
+        font-size: 5rem;
+    }
+}
