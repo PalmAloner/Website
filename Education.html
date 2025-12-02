@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="th">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,62 +8,70 @@
     <title>Education</title>
 </head>
 <body>
-<header>
-        <a href="index.html" class="logo">Home</a>
 
-        <nav>
-            <a href="index.html" > Home</a>
-            <a href="#" >Skills</a>
-            <a href="Education.html" class="active">Education</a>
-            <a href="#" >Activite</a>
-            <a href="#" >Contact</a>
-        </nav>
-        <div class="hamburger">
+<header>
+    <a href="index.html" class="logo">Home</a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Skills</a>
+        <a href="Education.html" class="active">Education</a>
+        <a href="#">Activities</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="hamburger">
         <span></span>
         <span></span>
         <span></span>
     </div>
-    </header>
-    <section class="education">
+</header>
+
+<section class="education">
+
     <div class="education-content">
         <h1>ประวัติการศึกษา</h1>
     </div>
 
     <div class="education-img">
+
+        <!-- ม.ต้น -->
         <div class="edu-item">
             <img src="logo_1.jfif" alt="">
             <div class="edu-block">
-    <h2>มัธยมศึกษาตอนต้น (ม.1 - ม.3)</h2>
-    <h3>โรงเรียนปทุมวิไล</h3>
-    <p>ปีการศึกษา 2563 - 2565</p>
-    <p>GPAX : </p>
-</div>
+                <h2>มัธยมศึกษาตอนต้น (ม.1 - ม.3)</h2>
+                <h3>โรงเรียนปทุมวิไล</h3>
+                <p>ปีการศึกษา 2563 - 2565</p>
+                <p>GPAX : </p>
+            </div>
         </div>
 
+        <!-- ม.ปลาย -->
         <div class="edu-item">
             <img src="logo_2.png" alt="">
             <div class="edu-block">
-    <h2>มัธยมศึกษาตอนต้น (ม.4 - ม.6)</h2>
-    <h3>โรงเรียนคณะราษฎร์บำรุงปทุมธานี	</h3>
-    <p>ปีการศึกษา 2566 - 2568</p>
-    <p>GPAX : </p>
-</div>
+                <h2>มัธยมศึกษาตอนปลาย (ม.4 - ม.6)</h2>
+                <h3>โรงเรียนคณะราษฎร์บำรุงปทุมธานี</h3>
+                <p>ปีการศึกษา 2566 - 2568</p>
+                <p>GPAX : </p>
+            </div>
         </div>
+
     </div>
+
 </section>
 
-    </section>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
+<script>
+document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('nav');
 
     hamburger.addEventListener('click', () => {
-        nav.classList.toggle('active'); // เปิด/ปิดเมนู
-        hamburger.classList.toggle('open'); // เปลี่ยน hamburger เป็น X (optional)
+        nav.classList.toggle('active');
+        hamburger.classList.toggle('open');
     });
 });
 </script>
 
 </body>
-    </html>
+</html>
