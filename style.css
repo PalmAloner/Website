@@ -1,43 +1,52 @@
-/* โครงสร้างพื้นฐาน */
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* ==========================
+   RESET + BASE STYLE
+   ==========================*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     background: #1f1f1f;
     color: #fff;
 }
 
-/* Header */
-header{
+/* ==========================
+   HEADER / NAVBAR
+   ==========================*/
+header {
     width: 100%;
     padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,0.4);
+
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
 
-header .logo{
+header .logo {
     color: #fff;
     font-size: 26px;
     font-weight: 700;
+    text-decoration: none;
 }
 
-nav{
+nav {
     display: flex;
     gap: 30px;
 }
 
-nav a{
+nav a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
@@ -45,27 +54,29 @@ nav a{
 }
 
 nav a:hover,
-nav a.active{
+nav a.active {
     color: #b74b4b;
 }
 
-/* ปุ่ม hamburger */
-.hamburger{
+/* HAMBURGER */
+.hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
 }
 
-.hamburger span{
+.hamburger span {
     width: 30px;
     height: 4px;
     background: white;
     transition: .3s;
 }
 
-/* Home Section */
-.home{
+/* ==========================
+   HOME SECTION
+   ==========================*/
+.home {
     width: 100%;
     height: 100vh;
     padding: 0 8%;
@@ -74,42 +85,57 @@ nav a.active{
     align-items: center;
 }
 
-.home-img img{
+.home-img img {
     width: 350px;
     border-radius: 50%;
+    transition: .3s;
 }
 
-.home-content{
+.home-img img:hover {
+    transform: scale(1.05);
+}
+
+.home-content {
     max-width: 600px;
 }
 
-.home-content h1{
+.home-content h1 {
     font-size: 48px;
 }
 
-.home-content h3{
+.home-content h1 span {
+    color: #b74b4b;
+}
+
+.home-content h3 {
     font-size: 28px;
     margin: 10px 0;
 }
 
-.home-content p{
+.typing-text span {
+    color: #b74b4b;
+}
+
+.home-content p {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-.social-icons a{
+/* SOCIAL ICONS */
+.social-icons a {
     color: #fff;
     margin-right: 15px;
     font-size: 25px;
     transition: .3s;
 }
 
-.social-icons a:hover{
+.social-icons a:hover {
     color: #b74b4b;
 }
 
-.btn{
+/* BUTTON */
+.btn {
     display: inline-block;
     padding: 12px 28px;
     background: #b74b4b;
@@ -118,79 +144,85 @@ nav a.active{
     text-decoration: none;
     font-weight: 700;
     margin-top: 20px;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
 }
 
 /* ==========================
-   RESPONSIVE SECTION  
+   RESPONSIVE (MOBILE)
    ==========================*/
+@media (max-width: 768px) {
 
-/* มือถือทุกขนาด */
-@media (max-width: 768px){
-
-    /* ลดระยะ Padding */
-    header{
+    header {
         padding: 15px 5%;
     }
 
-    /* ซ่อนเมนูปกติ */
-    nav{
+    /* ซ่อนเมนูเดิม */
+    nav {
         position: absolute;
         top: 70px;
         right: 0;
-        background: rgba(0,0,0,0.8);
+
         flex-direction: column;
         width: 200px;
         padding: 20px;
         display: none;
+
+        background: rgba(0, 0, 0, 0.85);
         border-radius: 10px;
         text-align: right;
     }
 
-    nav.active{
+    nav.active {
         display: flex;
     }
 
-    .hamburger{
+    /* เปิด hamburger */
+    .hamburger {
         display: flex;
     }
 
-    /* หน้า Home จัดเรียงใหม่ */
-    .home{
+    /* HOME – จัดกลางทั้งหมด */
+    .home {
         flex-direction: column;
         text-align: center;
         padding-top: 120px;
+        height: auto;
     }
 
-    .home-img img{
+    .home-img img {
         width: 230px;
         margin-bottom: 20px;
     }
 
-    .home-content h1{
+    .home-content h1 {
         font-size: 32px;
     }
 
-    .home-content h3{
+    .home-content h3 {
         font-size: 20px;
     }
 
-    .home-content p{
+    .home-content p {
         font-size: 14px;
         padding: 0 10px;
     }
 }
 
-/* เพิ่มความพอดีสำหรับมือถือเล็กมาก (iPhone SE, Android เครื่องเล็ก) */
-@media (max-width: 480px){
-    .home-content h1{
+/* มือถือเล็กมาก */
+@media (max-width: 480px) {
+    .home-content h1 {
         font-size: 28px;
     }
 
-    .home-content h3{
+    .home-content h3 {
         font-size: 18px;
     }
 
-    .home-img img{
+    .home-img img {
         width: 200px;
     }
 }
