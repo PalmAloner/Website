@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="th">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Certificates - Portfolio Website</title>
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">Home</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="AboutMe.html">About Me</a>
+            <a href="Skills.html">Skills</a>
+            <a href="Education.html">Education</a>
+            <a href="Portfolio.html">Portfolio</a>
+            <a href="Certificates.html" class="active">Certificates</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <script>
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", () => {
+            const navbar = document.querySelector(".navbar");
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll) {
+                navbar.style.top = "-100px";
+            } else {
+                navbar.style.top = "0";
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+
+    <section class="certificates-section">
+        <div class="certificates-content">
+            <h1>ใบรับรอง<span>ของฉัน</span></h1>
+            <p class="certificates-subtitle">ใบรับรองและความสำเร็จที่ได้รับ</p>
+
+            <div class="certificates-grid">
+                <!-- Certificate 1 -->
+                <div class="certificate-card">
+                    <div class="certificate-img">
+                        <img src="cert1.jpg" alt="Certificate 1" onerror="this.src='https://via.placeholder.com/400x300/b74b4b/ffffff?text=Certificate'">
+                        <div class="certificate-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Python Programming</h3>
+                        <p class="certificate-issuer">Coursera</p>
+                        <p class="certificate-date">
+                            <i class="far fa-calendar"></i> มกราคม 2024
+                        </p>
+                        <a href="#" class="certificate-link">
+                            <i class="fas fa-external-link-alt"></i> ดูใบรับรอง
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="certificate-card">
+                    <div class="certificate-img">
+                        <img src="cert2.jpg" alt="Certificate 2" onerror="this.src='https://via.placeholder.com/400x300/b74b4b/ffffff?text=Web+Development'">
+                        <div class="certificate-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <div class="certificate-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p class="certificate-issuer">Udemy</p>
+                        <p class="certificate-date">
+                            <i class="far fa-calendar"></i> มีนาคม 2024
+                        </p>
+                        <a href="#" class="certificate-link">
+                            <i class="fas fa-external-link-alt"></i> ดูใบรับรอง
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="certificate-card">
+                    <div class="certificate-img">
+                        <img src="cert3.jpg" alt="Certificate 3" onerror="this.src='https://via.placeholder.com/400x300/b74b4b/ffffff?text=JavaScript'">
+                        <div class="certificate-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <div class="certificate-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>JavaScript Essentials</h3>
+                        <p class="certificate-issuer">freeCodeCamp</p>
+                        <p class="certificate-date">
+                            <i class="far fa-calendar"></i> พฤษภาคม 2024
+                        </p>
+                        <a href="#" class="certificate-link">
+                            <i class="fas fa-external-link-alt"></i> ดูใบรับรอง
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certificate 4 -->
+                <div class="certificate-card">
+                    <div class="certificate-img">
+                        <img src="cert4.jpg" alt="Certificate 4" onerror="this.src='https://via.placeholder.com/400x300/b74b4b/ffffff?text=Database'">
+                        <div class="certificate-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <div class="certificate-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Database Management</h3>
+                        <p class="certificate-issuer">LinkedIn Learning</p>
+                        <p class="certificate-date">
+                            <i class="far fa-calendar"></i> กรกฎาคม 2024
+                        </p>
+                        <a href="#" class="certificate-link">
+                            <i class="fas fa-external-link-alt"></i> ดูใบรับรอง
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certificate 5 -->
+                <div class="certificate-card">
+                    <div class="certificate-img">
+                        <img src="cert5.jpg" alt="Certificate 5" onerror="this.src='https://via.placeholder.com/400x300/b74b4b/ffffff?text=Git+GitHub'">
+                        <div class="certificate-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Git & GitHub</h3>
+                        <p class="certificate-issuer">GitHub Learning Lab</p>
+                        <p class="certificate-date">
+                            <i class="far fa-calendar"></i> สิงหาคม 2024
+                        </p>
+                        <a href="#" class="certificate-link">
+                            <i class="fas fa-external-link-alt"></i> ดูใบรับรอง
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certificate 6 -->
+                <div class="certificate-card">
+                    <div class="certificate-img">
+                        <img src="cert6.jpg" alt="Certificate 6" onerror="this.src='https://via.placeholder.com/400x300/b74b4b/ffffff?text=Networking'">
+                        <div class="certificate-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <div class="certificate-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Network Fundamentals</h3>
+                        <p class="certificate-issuer">Cisco Networking Academy</p>
+                        <p class="certificate-date">
+                            <i class="far fa-calendar"></i> ตุลาคม 2024
+                        </p>
+                        <a href="#" class="certificate-link">
+                            <i class="fas fa-external-link-alt"></i> ดูใบรับรอง
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievement Stats -->
+            <div class="achievement-stats">
+                <div class="stat-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>6+</h3>
+                    <p>ใบรับรอง</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-book"></i>
+                    <h3>10+</h3>
+                    <p>คอร์สเรียน</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-code"></i>
+                    <h3>15+</h3>
+                    <p>โปรเจกต์</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>100+</h3>
+                    <p>ชั่วโมงเรียนรู้</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for full certificate view -->
+    <div id="certificateModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('nav');
+
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('active');
+                hamburger.classList.toggle('open');
+            });
+
+            // Modal functionality
+            const modal = document.getElementById('certificateModal');
+            const modalImg = document.getElementById('modalImg');
+            const certificateImgs = document.querySelectorAll('.certificate-overlay');
+            const closeModal = document.querySelector('.close');
+
+            certificateImgs.forEach((overlay) => {
+                overlay.addEventListener('click', function() {
+                    modal.style.display = 'flex';
+                    const img = this.previousElementSibling;
+                    modalImg.src = img.src;
+                });
+            });
+
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Animate stats on scroll
+            const animateStats = () => {
+                const stats = document.querySelectorAll('.stat-item h3');
+                
+                stats.forEach(stat => {
+                    const rect = stat.getBoundingClientRect();
+                    const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+                    
+                    if (isVisible && !stat.classList.contains('animated')) {
+                        stat.classList.add('animated');
+                        const target = parseInt(stat.textContent);
+                        let count = 0;
+                        const increment = target / 50;
+                        
+                        const counter = setInterval(() => {
+                            count += increment;
+                            if (count >= target) {
+                                stat.textContent = stat.textContent;
+                                clearInterval(counter);
+                            } else {
+                                stat.textContent = Math.floor(count) + '+';
+                            }
+                        }, 30);
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', animateStats);
+            animateStats();
+        });
+    </script>
+</body>
+</html>
