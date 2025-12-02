@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,62 +8,69 @@
     <link rel="stylesheet" href="style.css">
     <title>Portfolio Website</title>
 </head>
-
 <body>
-<header>
-    <a href="index.html" class="logo">Home</a>
+    <header class="navbar">
+        <a href="index.html" class="logo">Home</a>
 
-    <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="#">Skills</a>
-        <a href="Education.html">Education</a>
-        <a href="#">Activities</a>
-        <a href="#">Contact</a>
-    </nav>
-
-    <div class="hamburger">
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="AboutMe.html">About Me</a>
+            <a href="Skills.html">Skills</a>
+            <a href="Education.html">Education</a>
+            <a href="Portfolio.html">Portfolio</a>
+            <a href="Certificates.html">Certificates</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+        <div class="hamburger">
         <span></span>
         <span></span>
         <span></span>
     </div>
-</header>
+    </header>
+    <script>
+let lastScroll = 0;
 
-<section class="home">
-    <div class="home-img">
-        <img src="Logo.png" alt="">
-    </div>
+window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar");
+    const currentScroll = window.pageYOffset;
 
-    <div class="home-content">
-        <h1>สวัสดี ผมคือ <span>ปาล์ม</span></h1>
-        <h3 class="typing-text">ผมเป็น <span></span></h3>
+    if (currentScroll > lastScroll) {
+        // เลื่อนลง → ซ่อน
+        navbar.style.top = "-100px";
+    } else {
+        // เลื่อนขึ้น → โผล่กลับ
+        navbar.style.top = "0";
+    }
+    lastScroll = currentScroll;
+});
+</script>
 
-        <p>
-            ผมเป็นนักเรียนที่สนใจด้านการเขียนโปรแกรม 
-            ชอบทดลองทำโปรเจกต์ใหม่ ๆ และพัฒนาทักษะของตัวเองอยู่เสมอ
-            พร้อมเรียนรู้เทคโนโลยีต่าง ๆ เพื่อเตรียมความพร้อมสำหรับเข้ามหาวิทยาลัย
-        </p>
-
-        <div class="social-icons">
-            <a href="https://www.facebook.com/Palm.AL0NELY/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://github.com/PalmAloner"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/palmalonely/"><i class="fa-brands fa-instagram"></i></a>
+    <section class="home">
+        <div class="home-img">
+            <img src="Logo.png" alt="">
         </div>
-
-        <a href="mailto:palmgamerchty@gmail.com" class="btn">ติดต่อ</a>
-    </div>
-</section>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
+        <div class="home-content">
+            <h1>สวัสดี ผมคือ <span>ปาล์ม</span></h1>
+            <h3 class="typing-text">ผมเป็น <span></span></h3>
+            <p>ผมเป็นนักเรียนสายคอมที่สนใจการเขียนโปรแกรม  ชอบทดลองทำโปรเจกต์เล็ก ๆ และพัฒนาเกมือของตัวเองอยู่เสมอ มีความตั้งใจที่จะเรียนรู้เทคโนโลยีใหม่ ๆ เพื่อเตรียมตัวเข้ามหาวิทยาลัยและต่อยอดในอนาคต</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Palm.AL0NELY/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/PalmAloner"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/palmalonely/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="mailto:palmgamerchty@gmail.com" class="btn">ติดต่อ</a>
+        </div>
+    </section>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('nav');
 
     hamburger.addEventListener('click', () => {
-        nav.classList.toggle('active');
-        hamburger.classList.toggle('open');
+        nav.classList.toggle('active'); // เปิด/ปิดเมนู
+        hamburger.classList.toggle('open'); // เปลี่ยน hamburger เป็น X (optional)
     });
 });
 </script>
-
 </body>
 </html>
