@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">Home</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="AboutMe.html" class="active">About Me</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Education.html">Education</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <a href="Certificates.html">Certificates</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+
+    <div class="hamburger">
+        <span></span><span></span><span></span>
+    </div>
+</header>
+
+<script>
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar");
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll) {
+        navbar.style.top = "-100px";
+    } else {
+        navbar.style.top = "0";
+    }
+    lastScroll = currentScroll;
+});
+</script>
+
+<section class="about-section">
+    <div class="about-container">
+
+        <div class="about-img">
+            <img src="Mypic1.png" alt="Profile">
+        </div>
+
+        <div class="about-text">
+            <h1>About Me</h1>
+            <h2>Palm Alonely</h2>
+            <p>
+                ผมเป็นนักเรียนสายคอมที่สนใจด้านการเขียนโปรแกรม, ระบบเครือข่าย 
+                และการสร้างโปรเจกต์ใหม่ ๆ อยู่เสมอ ผมชอบทดลอง ปรับปรุง และเรียนรู้เทคโนโลยีใหม่ 
+                เพื่อพัฒนาทักษะของตัวเองและเตรียมตัวสำหรับการเข้ามหาวิทยาลัยในสาย IT
+            </p>
+
+            <div class="about-details">
+                <p><strong>🎓 อายุ:</strong> 18 ปี</p>
+                <p><strong>🖥 สนใจ:</strong> Coding, Networking, Server</p>
+                <p><strong>📍 ประเทศ:</strong> Thailand</p>
+            </div>
+
+            <a href="mailto:palmgamerchty@gmail.com" class="btn">ติดต่อผม</a>
+        </div>
+
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        hamburger.classList.toggle('open');
+    });
+});
+</script>
+
+</body>
+</html>
