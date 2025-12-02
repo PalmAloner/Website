@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="th">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact - Portfolio Website</title>
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">Home</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="AboutMe.html">About Me</a>
+            <a href="Skills.html">Skills</a>
+            <a href="Education.html">Education</a>
+            <a href="Portfolio.html">Portfolio</a>
+            <a href="Certificates.html">Certificates</a>
+            <a href="Contact.html"  class="active">Contact</a>
+        </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <script>
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", () => {
+            const navbar = document.querySelector(".navbar");
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll) {
+                navbar.style.top = "-100px";
+            } else {
+                navbar.style.top = "0";
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+
+    <section class="contact-section">
+        <div class="contact-content">
+            <h1>ติดต่อ<span>ฉัน</span></h1>
+            <p class="contact-subtitle">มีคำถามหรือต้องการติดต่อ? ส่งข้อความมาได้เลย!</p>
+
+            <div class="contact-container">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-box">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-text">
+                            <h3>Email</h3>
+                            <p>palmgamerchty@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <i class="fas fa-phone"></i>
+                        <div class="info-text">
+                            <h3>โทรศัพท์</h3>
+                            <p>+66 XX-XXXX-XXXX</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-text">
+                            <h3>ที่อยู่</h3>
+                            <p>ประเทศไทย</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>ติดตามฉัน</h3>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/Palm.AL0NELY/" target="_blank">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="https://github.com/PalmAloner" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/palmalonely/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <div class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">ชื่อของคุณ</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">อีเมลของคุณ</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="subject" required>
+                            <label for="subject">หัวข้อ</label>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" rows="5" required></textarea>
+                            <label for="message">ข้อความ</label>
+                        </div>
+
+                        <button type="submit" class="btn submit-btn">
+                            <i class="fas fa-paper-plane"></i> ส่งข้อความ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('nav');
+
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('active');
+                hamburger.classList.toggle('open');
+            });
+
+            // Form Submit Handler
+            const submitBtn = document.querySelector('.submit-btn');
+            submitBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+
+                if (name && email && subject && message) {
+                    // สร้าง mailto link
+                    const mailtoLink = `mailto:palmgamerchty@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`ชื่อ: ${name}\nอีเมล: ${email}\n\nข้อความ:\n${message}`)}`;
+                    
+                    window.location.href = mailtoLink;
+                    
+                    // แสดงข้อความแจ้งเตือน
+                    alert('กำลังเปิดโปรแกรมอีเมลของคุณ...');
+                } else {
+                    alert('กรุณากรอกข้อมูลให้ครบถ้วน');
+                }
+            });
+
+            // Floating Label Effect
+            const inputs = document.querySelectorAll('.form-group input, .form-group textarea');
+            
+            inputs.forEach(input => {
+                input.addEventListener('focus', () => {
+                    input.parentElement.classList.add('focused');
+                });
+
+                input.addEventListener('blur', () => {
+                    if (input.value === '') {
+                        input.parentElement.classList.remove('focused');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
